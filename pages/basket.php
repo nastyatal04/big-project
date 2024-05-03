@@ -52,16 +52,14 @@ require_once "../functionsProduct.php";
     </style>
 </head>
 <body>
-<?require '..\components\header.php';?>
-<?
-if(!isset($_SESSION['total_count_goods'])) {
-    echo '<h3 class="message">Здесь пока нет товаров...</h3>';
-}
-else {
-  cartFilling($conn);
-}
-?>
-
-    
+  <?showHeader();?>
+  <?
+  if(!isset($_SESSION['total_count_goods'])) {
+      echo '<h3 class="message">Здесь пока нет товаров...</h3>';
+  }
+  else {
+    cartFilling($conn);
+  }
+  ?>    
 </body>
 </html>

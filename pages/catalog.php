@@ -9,7 +9,7 @@ require_once "../functionsProduct.php";
     <title>Каталог</title>
 </head>
 <body>
-    <?require '..\components\header.php';?>
+    <?showHeader();?>
     <h1 class="title">Каталог товаров</h1>
     <div class="container">
         <?php
