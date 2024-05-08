@@ -1,5 +1,5 @@
 <?php
-require_once "..\connect.php";
+require_once "../connect.php";
 require_once "../functionsProduct.php";
 ?>
 <html lang="en">

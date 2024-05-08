@@ -43,7 +43,13 @@
         <a href="basket.php" class="header-btn">Корзина</a>
       </p>
       <p>
-        <a href="authorization.php" class="header-btn">Войти</a>
+        <?
+        if(isset($_COOKIE['name'])) {
+          echo "<a href='login.php' class='header-btn'>".$_COOKIE['name']."</a>";
+        } else {
+          echo "<a href='authorization.php' class='header-btn'>Войти</a>";
+        }
+        ?>        
       </p>
     </div>
   </body>

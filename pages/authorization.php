@@ -1,5 +1,5 @@
 <?php
-require_once "..\connect.php";
+require_once "../connect.php";
 require_once "../functionsProduct.php";
 ?>
 <html lang="en">
@@ -38,15 +38,39 @@ require_once "../functionsProduct.php";
             align-items: center;
             height: 100vh;
         }
+        .inputs {
+        padding: 4px;
+        }
+        .atr_btn {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px 24px;
+        border-radius: 8px;
+        background-color: rgb(215, 149, 122);
+        cursor: pointer;
+        font-size: 1.25rem;
+        text-decoration: none;
+        width: max-content;
+        border: 0;
+        outline: 0;
+        margin: 0 auto;
+      }
+      .atr_btn:hover {
+        background-color: rgb(194, 125, 98);
+      }
+      .atr_btn:focus {
+        outline:none!important;
+      }
     </style>
 </head>
 <body>
     <?showHeader();?>
     <div class="wrapper">
         <form action="" method="post" class="form">
-            <label for="" class="form_label">Логин<input type="text" name="login"></label>
-            <label for="" class="form_label">Пароль<input type="text" name="password"></label>
-            <input type="submit" value="Войти" name="atr_btn">
+            <label for="" class="form_label">Логин<input type="text" name="login"  class="inputs"></label>
+            <label for="" class="form_label">Пароль<input type="text" name="password"  class="inputs"></label>
+            <input type="submit" value="Войти" name="atr_btn" class="atr_btn">
             <span>Если Вы впервые на нашем сайте то <a href="registration.php">зарегестрируйтесть</a>.</span>
         </form>
     </div>

@@ -62,17 +62,14 @@ function autorization($login, $password, $conn) {
     if($result->num_rows == 0) {
         echo "<div class='message'>Такого пользователя нет в базе.</div>";
     } else {
-        echo "<div class='message'>". $_SESSION['name'] ."</div>";
         while($row = $result->fetch_array()){
-            session_start();
-            $_SESSION['name'] = $row['name'];
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['phone'] = $row['phone'];
-            $_SESSION['login'] =  $row['login'];
-            $_SESSION['password'] =  $row['password'];
-            echo "<div class='message'>". $_SESSION['name'] ."</div>";
+            setcookie("name", $age, time() + 3600 * 4);
+            setcookie("email", $age, time() + 3600 * 4);
+            setcookie("phone", $age, time() + 3600 * 4);
+            setcookie("login", $age, time() + 3600 * 4);
+            setcookie("password", $age, time() + 3600 * 4);            
+            echo "<div class='message'>". $_COOKIE['name'] ."</div>";
         }
     }
 }
-
 ?>

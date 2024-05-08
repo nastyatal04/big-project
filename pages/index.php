@@ -1,5 +1,5 @@
 <?php
-require_once "..\connect.php";
+require_once "../connect.php";
 require_once "../functionsProduct.php";
 ?>
 <html lang="en">
@@ -10,6 +10,6 @@ require_once "../functionsProduct.php";
 </head>
 <body>
     <?showHeader();?>
-    <h1>Супер-пупер-распупенная главная страница</h1>
+    <?showTitle("Супер-пупер-распупенная главная страница");?>
 </body>
 </html>
